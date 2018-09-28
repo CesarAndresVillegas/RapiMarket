@@ -1,0 +1,40 @@
+<ion-view title="Catalogo" hide-nav-bar="true" cache-view="false" ng-init="init()">
+  <ion-header-bar class="app-icon-header bar-assertive" style="top: 0px !important;">
+    <div class="buttons">
+      <button class="button button-icon icon ion-chevron-left custom-icon-white" ng-click="backView()"></button>
+    </div>
+    <h1 class="title">Estado del pedido</h1>
+  </ion-header-bar>
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <div class="center-text">
+      <img ng-show="estadoPedido.isSearch" ng-src="img/status/search-active.png"      width="12%" alt=""/>
+      <!--<img ng-show="isSearch" ng-src="img/status/right-double-arrow.png" width="10%" alt=""/> -->
+      <img ng-show="estadoPedido.isFound" ng-src="img/status/found-active.png"       width="12%" alt=""/>
+      <!--<img ng-show="isSearch" ng-src="img/status/right-double-arrow.png" width="10%" alt=""/> -->
+      <img ng-show="estadoPedido.isPicking" ng-src="img/status/pick-active.png"        width="12%" alt=""/>
+      <!--<img ng-show="isSearch" ng-src="img/status/right-double-arrow.png" width="10%" alt=""/>-->
+      <img ng-show="estadoPedido.isDelivering" ng-src="img/status/delivery-active.png"    width="12%" alt=""/>
+    </div>
+    <div class="center-text">
+      <img src="img/status/balls.gif" alt="">
+      <p>{{estadoPedido.textoEstadoActual}}</p>
+    </div>
+    <br>
+    <br>
+    <div class="list center-text">
+      <p>Nombre domiciliario: {{estadoPedido.nombreDomiciliario}}</p>
+      <p>Numero domiciliario: {{estadoPedido.numeroDomiciliario}}</p>
+      <p>Placa: {{estadoPedido.placaDomiciliario}}</p>
+      <button class="button button-positive" ng-click="onFinalizarPedido()">Finalizar pedido</button>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-assertive">
+    <div class="buttons">
+      <button class="button">Total:<b>{{ getTotal() | currency:undefined:0}}</b></button>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button style="font-weight: bold;" class="button" ng-click="cancelarPedido()" ng-show="">Cancelar Pedido</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,43 @@
+<ion-view title="Registrarse" hide-nav-bar="true">
+  <ion-header-bar class="app-icon-header bar-assertive" style="top: 0px !important;">
+    <div class="buttons">
+      <button class="button button-icon icon ion-chevron-left custom-icon-white" ng-click="backView()"></button>
+    </div>
+    <h1 class="title">Registrarse</h1>
+  </ion-header-bar>
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <form class="list">
+      <label class="item item-input">
+        <span class="input-label">Nombre</span>
+        <input type="text" placeholder="Nombre..." ng-model="userRegister.nombre">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Apellido</span>
+        <input type="text" placeholder="Apellido..." ng-model="userRegister.apellido">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="Email..." ng-model="userRegister.correo">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Teléfono</span>
+        <input type="text" placeholder="Teléfono..." ng-model="userRegister.telefono">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Contraseña</span>
+        <input type="password" placeholder="Contraseña..." ng-model="userRegister.pass">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Confirmar Contraseña</span>
+        <input type="password" placeholder="Contraseña..." ng-model="userRegister.confirmPass">
+      </label>
+      <br>
+      <button class="button button-assertive button-block" ng-click="onRegister()">Registrar</button>
+    </form>
+  </ion-content>
+</ion-view>

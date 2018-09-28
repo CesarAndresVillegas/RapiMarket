@@ -1,0 +1,20 @@
+<ion-view view-title="Mapa" name="menu-view" ng-init="init()" cache-view="false">
+	<ion-header-bar class="app-icon-header bar-assertive" style="top: 0px !important;">
+    <div class="buttons">
+      <button class="button button-icon icon ion-chevron-left custom-icon-white" ng-click="backView()"></button>
+    </div>
+    <h1 class="title">Mapa</h1>
+  </ion-header-bar>
+	<ion-content>
+		<div id="map" data-tap-disabled="true"></div>
+		<label class="item item-input">
+			<span class="input-label">Alias</span>
+			<input type="text" placeholder="p.e: Casa..." ng-model="mapText.aliasDireccion">
+		</label>
+		<label class="item item-input">
+		<span class="input-label">Dirección</span>
+			<input type="text" placeholder="Dirección..." ng-model="mapText.currentDireccion">
+		</label>
+		<button class="button button-dark button-block" ng-click="crearDireccion()">Crear dirección</button>
+	</ion-content>
+</ion-view>

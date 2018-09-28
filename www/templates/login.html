@@ -1,0 +1,27 @@
+<ion-view title="Login" hide-nav-bar="true" hide-back-button="true">
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <div>
+      <img src="img/rapimarket.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <br>
+    <button class="button button-positive button-small button-block ion-social-facebook icon-left fb-style" ng-click="onLoginFB()">Login with facebook</button>
+    <br>
+    <form class="list">
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="Email..." ng-model="user.mail">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password..." ng-model="user.pass">
+      </label>
+    </form>
+    <button class="button button-positive button-small button-clear" ng-click="onOlvidoPass()">¿ Olvidó la contraseña ?</button>
+    <button class="button button-positive button-small btn-ingresar" ng-click="onLogin()">Ingresar</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="button button-assertive button-block" ng-click="onRegister()">Registrarse</button>
+  </ion-content>
+</ion-view>

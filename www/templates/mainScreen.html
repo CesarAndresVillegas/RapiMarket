@@ -1,0 +1,31 @@
+<ion-view title="Main" hide-nav-bar="true" id="page2" ng-init="init()" cache-view="false">
+  <div ng-include src="'templates/navtabs.html'"></div>
+  <ion-content padding="false" class="manual-ios-statusbar-padding has-tabs-top">
+    <div style="margin: 0px; background-color: rgb(232, 235, 239); text-align: center;">
+      <img ng-src="{{main.banner}}" alt="" width="100%" height="160px">
+    </div>
+    <form class="list">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Buscar producto..." ng-model="searchProduct.nombre">
+      </label>
+    </form>
+    <div class="container">
+      <div class="columns">
+        <div class="line-item" ng-repeat="p in products | filter: searchProduct.nombre">
+          <p class="center-text text-main">{{p.nombre}}</p>
+          <div class="img-main">
+            <img ng-src="{{p.img_l}}" width="50px" style="text-align: center;" />
+          </div>
+          <p class="center-text text-main-price">Precio: {{p.precio}}</p>
+          <div class="div-btn-main center-item-main-screen">
+            <button class="btn-main-screen" ng-click="onAdd(p)">Agregar</button>
+            <button class="btn-main-screen" ng-click="onMinus($index)">-</button>
+            <p class="cant-main-screen text-quant-main">{{p.cantidad == null ? 1 : p.cantidad}}</p>
+            <button class="btn-main-screen" ng-click="onPlus($index)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

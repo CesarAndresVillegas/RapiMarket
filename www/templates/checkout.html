@@ -1,0 +1,44 @@
+<ion-view title="CheckOut" hide-nav-bar="true" cache-view="false" ng-init="init()">
+  <ion-header-bar class="app-icon-header bar-assertive correct-header" style="top: 0px !important;">
+    <div class="buttons">
+      <button class="button button-icon icon ion-chevron-left custom-icon-white" ng-click="backView()"></button>
+    </div>
+    <h1 class="title">CheckOut</h1>
+  </ion-header-bar>
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <form  class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Dirección:
+        </div>
+        <select ng-options="option.direccion for option in direcciones track by option.id" ng-model="checkout.direccion">
+        </select>
+      </label>
+      <button class="button button-assertive button-block ion-ios-location" ng-click="goMap()">Nueva dirección</button>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Forma de pago:
+        </div>
+        <select ng-options="option.nombre for option in formas_pago track by option.id" ng-model="checkout.forma_pago">
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Teléfono:</span>
+        <input type="text" placeholder="Teléfono..." ng-model="checkout.phone">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Observaciones:</span>
+        <input type="text" placeholder="Ej: llevar cambio para vueltas..." ng-model="checkout.observations">
+      </label>
+    </form>
+  </ion-content>
+  <ion-footer-bar class="bar-assertive">
+    <div class="buttons">
+      <button class="button">Total:<b>{{ getTotal() | currency:undefined:0}}</b></button>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button style="font-weight: bold;" class="button" ng-click="confirmarPedido()" ng-disabled="isSend">Confirmar Pedido</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

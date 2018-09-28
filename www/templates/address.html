@@ -1,0 +1,20 @@
+<ion-view title="Direcciones" hide-nav-bar="true" cache-view="false" ng-init="init()">
+	<ion-header-bar class="app-icon-header bar-assertive correct-header" style="top: 0px !important;">
+		<div class="buttons">
+			<button class="button button-icon icon ion-chevron-left custom-icon-white" ng-click="backView()"></button>
+		</div>
+		<h1 class="title">Mis direcciones</h1>
+	</ion-header-bar>
+	<ion-content padding="false" class="manual-ios-statusbar-padding">
+		<ul class="list">
+			<li class="item item-list-historial" ng-repeat="d in listDirecciones">
+				<div class="go-left" style="width: 75%;">
+					Alias: {{d.alias}}, dirección: {{d.direccion}}
+				</div>
+				<div class="go-right" style="width: 25%;">
+					<i class="icon ion-trash-b icon-right icon-list-historial" ng-click="onDeleteAddress()"></i>
+				</div>
+			</li>
+		</ul>
+	</ion-content>
+</ion-view>

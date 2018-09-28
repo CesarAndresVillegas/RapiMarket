@@ -1,0 +1,222 @@
+/* Empty. Add your own CSS if you like */
+/* Tabs  */
+.tabs-top >.tabs, .tabs.tabs-top
+{
+  top: 0 !important;
+}
+
+.tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated{
+  border-width: 0px 0px 0px 0px !important;
+}
+
+.correct-header{
+  top: 0px !important;
+}
+.has-tabs-top {
+  top: 100px !important;
+}
+
+.btn-mytabs {
+  padding-top: 71px;
+  margin-top: 0px !important;
+}
+
+.mytabs-nav {
+  height: 100px;
+}
+
+.tab-item {
+  height: 43% !important;
+}
+.mytabs > .tab-nav {
+  height: 100px !important;
+  background-image: url('../img/banner.png') !important;
+  background-size: contain;
+}
+
+.mytabs-title {
+ margin-top: 57px !important;
+ color: white;
+}
+
+/* Login */
+.btn-ingresar {
+  width: 150px;
+  margin-left: 16%;
+}
+
+/* Mapa */
+#map {
+  margin-top: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 98%;
+  height: 70%;
+}
+
+.columns {
+  columns: 2;
+}
+
+/* Menu
+==================================*/
+html, body,
+.scroll /* because the <ion-content> content is placed inside a div.scroll */
+{
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > .cell-row {
+  flex: 1;
+  display: flex;
+}
+.cell-row > div {
+  flex: 1;
+  flex-grow: 1;
+  color: #fff;
+
+  /* Flex for these containers (cells) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container i[class^="ion-"] {
+  font-size: 90px;
+}
+.cell-row-1 {
+  background-color: #000;
+}
+.cell-row-2 {
+  background-color: #ccc;
+}
+.cell-row-3 {
+  background-color: #eee;
+}
+
+.cell-1 {
+  background-color: #FE642E;
+}
+.cell-2 {
+  background-color: #FA8258;
+}
+.cell-3 {
+  background-color: #FAAC58;
+}
+
+/* Main Screen */
+.center-text {
+  text-align: center;
+}
+
+.div-btn-main {
+  display: flex;
+}
+
+.line-item {
+  /*border: 1px !important;
+  border-style: solid !important;*/
+  margin: 5px;
+  /*height: 200px !important;
+  border-color: ##B3B3B3 !important;
+  */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.img-main {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-main-screen {
+  margin: 1px;
+  background-color: ##B3B3B3;
+  color: white;
+  border-radius: 5px;
+}
+
+.cant-main-screen {
+  margin: 2px;
+  font-size: 16px;
+}
+
+.center-item-main-screen {
+  position: relative;
+  left: 12%;
+  margin-bottom: : -10px;
+}
+
+.text-main{
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.text-main-price{
+  font-size: 11px;
+  text-align: center;
+}
+
+.text-quant-main {
+  margin: 2px;
+  font-size: 15px;
+}
+
+/* Facebook style */
+.fb-style {
+  background-color: #3b5998 !important;
+  color: white;
+}
+
+/* Profile */
+.item-list-historial {
+  font-size: 13px;
+}
+
+.icon-list-historial {
+  margin-left: 20%;
+}
+
+/* Address */
+.go-right {
+  float: right;
+}
+
+.go-left {
+  float: left;
+}
+
+/* cart */
+.item-item-cart-left {
+  float: left;
+}
+
+.item-item-cart-right {
+  float: right;
+}
+
+.text-item-cart {
+  font-size: 10px !important;
+}
+
+.center-item-cart {
+  margin-top: 8%;
+  left: 5%;
+}
+
+.btn-delete-cart {
+  background-color: #F73E3E;
+  margin-left: 16px;
+}
+
+.text-cart-price{
+  font-size: 9px !important;
+}

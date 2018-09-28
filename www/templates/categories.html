@@ -1,0 +1,49 @@
+<ion-view title="Catalogo" hide-nav-bar="true">
+<div ng-include src="'templates/navtabs.html'"></div>
+  <ion-content padding="false" class="manual-ios-statusbar-padding has-tabs-top">
+    <div class="container">
+      <div class="cell-row cell-row-1">
+        <div class="cell-1" ng-click="filter('all')" style="background-image: url('img/todo-tile.png') !important; background-size: 100% 100%;">
+          <div>
+            <div></div>
+            <div class="titulo-menu"></div>
+          </div>
+        </div>
+        <div class="cell-2" ng-click="filter('farma')" style="background-image: url('img/farma-tile.png') !important; background-size: 100% 100%;">
+          <div>
+            <div></div>
+            <div class="titulo-menu"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cell-row cell-row-1">
+        <div class="cell-1" ng-click="filter('limpieza')" style="background-image: url('img/limpieza-tile.png') !important; background-size: 100% 100%;">
+          <div>
+            <div></div>
+            <div class="titulo-menu"></div>
+          </div>
+        </div>
+        <div class="cell-2" ng-click="filter('lacteos')" style="background-image: url('img/lacteos-tile.png') !important; background-size: 100% 100%;">
+          <div>
+            <div></div>
+            <div class="titulo-menu"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cell-row cell-row-1">
+        <div class="cell-1" ng-click="filter('empacados')" style="background-image: url('img/prod-emp-tile.png') !important; background-size: 100% 100%;">
+          <div>
+            <div></div>
+            <div class="titulo-menu"></div>
+          </div>
+        </div>
+        <div class="cell-2" ng-click="filter('medicina')" style="background-image: url('img/aim-tile.png') !important; background-size: 100% 100%;">
+          <div>
+            <div></div>
+            <div class="titulo-menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view title="Main" hide-nav-bar="true" id="page2" ng-init="init()" cache-view="false">
+  <div ng-include src="'templates/navtabs.html'"></div>
+  <ion-content padding="false" class="manual-ios-statusbar-padding has-tabs-top">
+    <div class="container">
+      <div class="row item" ng-repeat="p in productsCart">
+        <div class="col col-100">
+          <div>
+            <div class="item-item-cart-left" style="width: 70%;">
+              <img ng-src="{{productsCart[$index].img_l}}" width="50px"/>
+              <p class="text-item-cart item-text-wrap">{{productsCart[$index].nombre}}</p>
+              <p class="text-cart-price"> {{productsCart[$index].cantidad}} x COP {{productsCart[$index].precio | currency:undefined:0}}</p>
+            </div>
+            <div class="div-btn-main center-item-cart item-item-cart-right" style="width: 30%;">
+              <button class="btn-main-screen" ng-click="onMinus($index)">-</button>
+              <p class="center-text cant-main-screen">{{productsCart[$index].cantidad == null ? 1 : productsCart[$index].cantidad}}</p>
+              <button class="btn-main-screen" ng-click="onPlus($index)">+</button>
+              <button class="btn-main-screen ion-trash-b btn-delete-cart" ng-click="onDelete($index)"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-assertive">
+    <div class="buttons">
+      <button class="button">Total:<b>{{ getTotal() | currency:undefined:0}}</b></button>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button style="font-weight: bold;" class="button ion-checkmark-circled button-clear icon-left" ng-click="irCheckout()">CheckOut</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

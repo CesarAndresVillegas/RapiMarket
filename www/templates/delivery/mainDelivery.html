@@ -1,0 +1,34 @@
+<ion-view title="Delivery" hide-nav-bar="true" cache-view="false" ng-init="init()">
+	<ion-header-bar class="app-icon-header bar-assertive">
+		<div class="buttons">
+			<button class="button button-icon icon ion-chevron-left custom-icon-white" ng-click="backView()"></button>
+		</div>
+		<h1 class="title">Pedidos Pendientes</h1>
+		<div class="buttons">
+			<button class="button button-icon icon ion-refresh custom-icon-white" ng-click="onRefresh()">Refrescar</button>
+		</div>
+	</ion-header-bar>
+	<ion-content padding="false" class="manual-ios-statusbar-padding">
+		<div class="card" ng-repeat="p in listPendientes" ng-click="tomarPedido(p)">
+			<div class="item item-divider">
+				<h2>#{{p.id}}</h2>
+			</div>
+			<div class="item item-text-wrap">
+				<b>Dirección:</b> {{p.direccion}} <br>
+				<b>Nombre:</b> {{p.nombre}} <br>
+				<b>Instrucciones:</b> {{p.instrucciones}} <br>
+			</div>
+			<div class="item item-divider">
+				<b>{{p.fecha_pedido}}</b> - {{p.distancia}}
+			</div>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="bar-assertive">
+		<div class="buttons">
+		</div>
+		<h1 class="title"></h1>
+		<div class="buttons">
+			<button style="font-weight: bold;" class="button" ng-click="irMisPedidos()">Pedidos tomados</button>
+		</div>
+	</ion-footer-bar>
+</ion-view>
